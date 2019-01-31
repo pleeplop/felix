@@ -118,6 +118,12 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.util.function</artifactId>
+            <version>1.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>org.apache.felix</groupId>
             <artifactId>org.apache.felix.gogo.runtime</artifactId>
             <version>1.0.0</version>

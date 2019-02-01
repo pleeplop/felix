@@ -82,6 +82,7 @@ import org.osgi.service.component.runtime.ServiceComponentRuntime;
 import org.osgi.service.component.runtime.dto.ComponentConfigurationDTO;
 import org.osgi.service.component.runtime.dto.ComponentDescriptionDTO;
 import org.osgi.service.log.LogService;
+import org.osgi.service.log.Logger;
 import org.osgi.util.tracker.ServiceTracker;
 
 import junit.framework.Assert;
@@ -1036,6 +1037,11 @@ public abstract class ComponentTestBase
             {
                 log( level, msg, exception );
             }
+        }
+
+        @Override
+        public <L extends Logger> L getLogger(String name, Class<L> loggerType) {
+            return null;
         }
 
         private int getEnabledLogLevel()

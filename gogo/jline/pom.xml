@@ -94,6 +94,7 @@
                             org.jline*;version="[3.0,4)",
                             *
                         </Import-Package>
+			<Bundle-Activator>org.apache.felix.gogo.jline.Activator</Bundle-Activator>
                     </instructions>
                 </configuration>
             </plugin>

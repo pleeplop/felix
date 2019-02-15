@@ -107,6 +107,9 @@ public class Activator implements BundleActivator, SingleServiceListener {
         dict.put(CommandProcessor.COMMAND_FUNCTION, Posix.functions);
         regs.add(context.registerService(Posix.class.getName(), new Posix(processor), dict));
 
+        dict.put(CommandProcessor.COMMAND_FUNCTION, Telnet.functions);
+        regs.add(context.registerService(Telnet.class.getName(), new Telnet(processor), dict));
+
         Shell shell = new Shell(new ShellContext(), processor);
         dict.put(CommandProcessor.COMMAND_FUNCTION, Shell.functions);
         regs.add(context.registerService(Shell.class.getName(), shell, dict));
